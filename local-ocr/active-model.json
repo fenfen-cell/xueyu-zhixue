@@ -1,0 +1,7 @@
+{
+  "model": "finetuned",
+  "reason": "Same-WASM validation regression passed",
+  "parent_experiment": "xyocr-20261031-600-fd3a816bb286",
+  "validation_cer": 0.12174233354820886,
+  "baseline_validation_cer": 0.12735979371949535
+}

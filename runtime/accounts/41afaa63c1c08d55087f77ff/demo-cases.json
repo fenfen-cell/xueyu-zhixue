@@ -1,0 +1,76 @@
+[
+  {
+    "id": "tibetan-page-75",
+    "title": "藏文第75页完整技术演示",
+    "doc_id": "a0a87f5f4183",
+    "ocr_doc_id": "16c7fbe849e3",
+    "note": "使用配套TXT作为技术对照，未冒充人工OCR校对或教师审核；原图识别稿保留为待校对。示范作答由程序构造，不是学生成绩。",
+    "teacher_review": "pending",
+    "steps": [
+      {
+        "label": "原图与OCR初稿",
+        "kind": "doc",
+        "id": "16c7fbe849e3"
+      },
+      {
+        "label": "参考TXT与来源",
+        "kind": "doc",
+        "id": "a0a87f5f4183"
+      },
+      {
+        "label": "藏汉精讲",
+        "kind": "run",
+        "id": "10f8c6448f3d"
+      },
+      {
+        "label": "原文练习",
+        "kind": "run",
+        "id": "f33567557a71"
+      },
+      {
+        "label": "示范批改",
+        "kind": "attempt",
+        "id": "e43e07dde671"
+      },
+      {
+        "label": "20分钟教案",
+        "kind": "run",
+        "id": "30f75a1650cf"
+      },
+      {
+        "label": "15分钟修订版",
+        "kind": "run",
+        "id": "7916e20e1a3a"
+      }
+    ],
+    "explain_run_id": "10f8c6448f3d",
+    "quiz_run_id": "f33567557a71",
+    "attempt_id": "e43e07dde671",
+    "lesson_run_id": "30f75a1650cf",
+    "revision_run_id": "7916e20e1a3a"
+  },
+  {
+    "id": "water-reading",
+    "title": "水循环自编阅读示例",
+    "doc_id": "324ebb5e8069",
+    "note": "自编技术示例，非审定教材，藏文种子词仍待教师复核。",
+    "teacher_review": "pending",
+    "steps": [
+      {
+        "label": "阅读资料",
+        "kind": "doc",
+        "id": "324ebb5e8069"
+      },
+      {
+        "label": "原文问答",
+        "kind": "run",
+        "id": "e59544fbc717"
+      },
+      {
+        "label": "30分钟教案",
+        "kind": "run",
+        "id": "60446c77cd03"
+      }
+    ]
+  }
+]

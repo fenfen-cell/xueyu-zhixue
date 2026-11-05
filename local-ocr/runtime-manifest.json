@@ -1,0 +1,71 @@
+{
+  "packages": [
+    {
+      "name": "tesseract.js",
+      "version": "7.0.0",
+      "path": "tesseract.js"
+    },
+    {
+      "name": "bmp-js",
+      "version": "0.1.0",
+      "path": "bmp-js"
+    },
+    {
+      "name": "idb-keyval",
+      "version": "6.3.0",
+      "path": "idb-keyval"
+    },
+    {
+      "name": "is-url",
+      "version": "1.2.4",
+      "path": "is-url"
+    },
+    {
+      "name": "node-fetch",
+      "version": "2.7.0",
+      "path": "node-fetch"
+    },
+    {
+      "name": "whatwg-url",
+      "version": "5.0.0",
+      "path": "whatwg-url"
+    },
+    {
+      "name": "tr46",
+      "version": "0.0.3",
+      "path": "tr46"
+    },
+    {
+      "name": "webidl-conversions",
+      "version": "3.0.1",
+      "path": "webidl-conversions"
+    },
+    {
+      "name": "opencollective-postinstall",
+      "version": "2.0.3",
+      "path": "opencollective-postinstall"
+    },
+    {
+      "name": "regenerator-runtime",
+      "version": "0.13.11",
+      "path": "regenerator-runtime"
+    },
+    {
+      "name": "tesseract.js-core",
+      "version": "7.0.0",
+      "path": "tesseract.js-core"
+    },
+    {
+      "name": "wasm-feature-detect",
+      "version": "1.9.0",
+      "path": "wasm-feature-detect"
+    },
+    {
+      "name": "zlibjs",
+      "version": "0.3.1",
+      "path": "zlibjs"
+    }
+  ],
+  "engine": "Tesseract.js CPU WASM",
+  "networkRequired": false
+}

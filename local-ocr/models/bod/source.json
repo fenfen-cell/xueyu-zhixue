@@ -1,0 +1,9 @@
+{
+  "id": "bod_best_int",
+  "source": "@tesseract.js-data/bod 1.0.0",
+  "url": "https://registry.npmjs.org/@tesseract.js-data/bod/-/bod-1.0.0.tgz",
+  "member": "package/4.0.0_best_int/bod.traineddata.gz",
+  "bytes": 1966440,
+  "sha256": "0b1765dcbfef1ece5f3f425ad1eb9826024a72d71db24ca8e3e2a76a011f906f",
+  "engine": "bundled tesseract.js 7.0.0"
+}

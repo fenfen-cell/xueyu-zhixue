@@ -1,0 +1,4 @@
+local-ocr/node_modules/
+__pycache__/
+*.pyc
+runtime/*.log

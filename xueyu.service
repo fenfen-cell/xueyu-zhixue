@@ -1,0 +1,19 @@
+[Unit]
+Description=Xueyu Zhixue (Tibetan bilingual teaching assistant)
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/xueyu
+Environment=PORT=8080
+Environment=PYTHONUTF8=1
+Environment=PYTHONUNBUFFERED=1
+Environment=XY_NODE_EXECUTABLE=/usr/bin/node
+ExecStart=/usr/bin/python3 /opt/xueyu/serve_cloud.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/xueyu.log
+StandardError=append:/var/log/xueyu.log
+
+[Install]
+WantedBy=multi-user.target

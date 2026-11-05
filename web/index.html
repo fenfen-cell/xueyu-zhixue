@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>雪域智学 · 藏汉双语教材智能助教</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script><script src="/v2.js" defer></script><script src="/ocr.js" defer></script><script src="/readiness.js" defer></script></head>
+<body>
+<div id="login-screen" class="login-screen" hidden><form id="login-form" class="panel login-card"><h1>藏汉双语教材智能助教</h1><p>评审体验空间 · 登录后，各账号的教材与任务分别保存。</p><section class="demo-login-details" aria-label="演示登录信息"><div class="demo-login-row"><span>演示账号</span><code id="demo-login-user">mobile_teacher</code><button type="button" data-login-copy="user">复制</button></div><div class="demo-login-row"><span>演示密码</span><code id="demo-login-password">zAGHrE4U4qH1qMxubqFL</code><button type="button" data-login-copy="password">复制</button></div></section><label for="login-user">账号</label><input id="login-user" autocomplete="username" value="mobile_teacher" required><label for="login-password">密码</label><input id="login-password" type="password" autocomplete="current-password" value="zAGHrE4U4qH1qMxubqFL" required><button class="btn primary" type="submit">登录体验</button><p id="login-error" role="alert"></p></form></div>
+<aside class="sidebar">
+  <a class="brand" href="/"><span class="logo">雪</span><span>雪域智学<small>XUEYU LEARNING</small></span></a>
+  <div class="workspace-label">教学工作空间 <span>LOCAL</span></div>
+  <nav aria-label="主导航">
+    <button class="nav active" data-view="studio"><span>◈</span>助教工作台</button>
+    <button class="nav" data-view="library"><span>▤</span>教材知识库 <b id="doc-count">0</b></button>
+    <button class="nav" data-view="practice"><span>✎</span>练习与批改</button>
+    <button class="nav" data-view="logs"><span>⌘</span>执行记录</button>
+    <button class="nav" data-view="settings"><span>⚙</span>接入与评测</button>
+  </nav>
+  <div class="side-note"><span class="dot"></span> 本地服务已启动<p>让每一页教材，<br>成为可以对话的学习资源。</p><small>教育 Agent · 原文可追溯</small></div>
+</aside>
+<main>
+  <header><div id="breadcrumb">工作空间 <span>/</span> 助教工作台</div><div class="header-right"><button id="text-size" class="reading-toggle" type="button" aria-pressed="false" title="切换更大字号">A＋ 大字</button><span id="mode-badge" class="badge">本地检索模式</span><span class="avatar">师</span></div></header>
+  <section id="view-studio" class="view active">
+    <div class="page-heading"><div><div class="eyebrow">雪域智学 · 教学工作空间</div><h1>藏汉双语教材智能助教</h1><p>从原文出发，串联阅读、备课、练习与反馈。</p></div><button class="btn soft" id="load-demo">体验自编样例 ↗</button></div>
+    <div class="hero"><div><span class="hero-tag">བོད་ཡིག · 藏汉双语教学探索</span><h2>知识有出处，<br>学习有回响。</h2><p>教材入库 → 原文检索 → 教学工具 → 引用检查<br>每一步执行过程，都可以查看与导出。</p><button class="btn cream" id="hero-import">导入第一份教材 <span>＋</span></button></div><div class="mountain-scene" aria-hidden="true"><div class="sun"></div><div class="mountain far"></div><div class="mountain near"></div><div class="land"></div><span class="scene-label">从雪域出发 · 让知识抵达</span></div></div>
+    <div class="section-title"><h2>今天，想让助教帮你做什么？</h2><span>四种教学任务，一条可追溯链路</span></div>
+    <div class="capabilities">
+      <button class="capability" data-intent="qa" data-goal="教材中水循环的过程是什么？"><i>01 / 阅读</i><h3>教材问答 <span>↗</span></h3><p>检索教材内容，返回段落依据</p></button>
+      <button class="capability" data-intent="explain" data-goal="逐段讲解这节课，列出藏汉术语"><i>02 / 理解</i><h3>藏汉精讲 <span>↗</span></h3><p>原文与术语对照，模型辅助讲解</p></button>
+      <button class="capability" data-intent="quiz" data-goal="根据这节课出3道基础练习题"><i>03 / 巩固</i><h3>随堂练习 <span>↗</span></h3><p>原文多题型、评分与错题重练</p></button>
+      <button class="capability" data-intent="lesson" data-goal="为这节课生成一份40分钟的教案"><i>04 / 教学</i><h3>一键备课 <span>↗</span></h3><p>教学目标、提问链与分层作业</p></button>
+    </div>
+    <div class="studio-grid">
+      <article class="panel task-panel"><div class="panel-title"><h2>布置一个教学任务</h2><span class="tiny">Planner → Tool → Critic</span></div>
+        <label for="doc-select">使用教材</label><select id="doc-select"><option value="">请先导入教材或加载样例</option></select>
+        <div class="form-row"><div><label for="intent">任务类型</label><select id="intent"><option value="auto">自动识别</option><option value="qa">教材问答</option><option value="explain">逐段精讲</option><option value="quiz">出题</option><option value="lesson">备课</option></select></div><div><label for="run-mode">运行方式</label><select id="run-mode"><option value="local">本地检索与模板</option><option value="llm">大模型 + 工具调用</option></select></div></div>
+        <label for="goal">任务描述</label><textarea id="goal" rows="4" placeholder="例如：根据这节课出 3 道基础练习题，或为我整理一份教案。"></textarea>
+        <label for="knowledge-point">知识点范围（可选）</label><input id="knowledge-point" placeholder="填写原文中的词，多个词用逗号分隔；留空为整课">
+        <div class="form-row"><div><label for="question-type">出题类型</label><select id="question-type"><option value="fill">原文填空</option><option value="choice">原文选择</option><option value="truefalse">原文判断</option><option value="mixed">混合题型</option></select></div><div><label for="question-count">题数上限</label><select id="question-count"><option value="">按任务描述</option><option>1</option><option>3</option><option>5</option><option>8</option></select></div></div>
+        <p class="tiny">题数受已确认段落数限制。选择和判断用于原文阅读核对，不代表概念理解能力测评。</p>
+        <div class="task-footer"><small>以已校对教材为依据</small><button class="btn primary" id="run-agent">开始执行 <span>→</span></button></div>
+        <div id="progress" class="progress" hidden></div>
+      </article>
+      <article class="panel output-panel"><div class="panel-title"><h2>助教的工作成果</h2><div id="export-actions" hidden><a id="export-md" class="text-link">讲义 ↓</a> <a id="export-json" class="text-link">日志 ↓</a></div></div>
+        <div id="result-empty" class="empty"><span class="empty-icon">✧</span><h3>好的学习，从一个问题开始</h3><p>选择教材并描述任务。<br>助教会在这里呈现结果与原文出处。</p></div><div id="result" hidden><div id="result-meta" class="result-meta"></div><div id="answer" class="prose"></div><div id="bilingual-cards"></div><div id="citations"></div><button class="btn soft" id="go-practice" hidden>打开练习与批改 →</button><section id="lesson-revision" hidden><h3>继续修改这份教案</h3><p id="revision-info" class="tiny"></p><textarea id="revision-goal" rows="3" placeholder="例如：改成30分钟，再简单些"></textarea><button id="revise-lesson" class="btn primary">保存为下一版</button></section></div>
+      </article>
+    </div>
+  </section>
+  <section id="view-library" class="view"><div class="page-heading"><div><div class="eyebrow">TEXTBOOK KNOWLEDGE</div><h1>教材知识库</h1><p>保留原始识别文本，让每一段知识都有出处。</p></div></div>
+    <div class="library-grid"><article class="panel"><h2>添加教材</h2><label for="import-title">教材名称</label><input id="import-title" placeholder="例如：七年级科学 · 水循环"><label for="import-text">粘贴教材原文</label><textarea id="import-text" rows="8" placeholder="支持藏文、汉文及混合文本。每个换行将保存为独立段落。"></textarea><button class="btn primary" id="import-text-btn">保存并建立索引</button><div class="divider"></div><label for="text-file">或导入文件 · TXT / MD / DOCX</label><input type="file" id="text-file" accept=".txt,.md,.docx"><div class="divider"></div><h3>教材图片识别</h3><p class="muted" id="ocr-status">OCR 服务未接入。可先导入已有的识别结果。</p><label for="ocr-provider">识别方式</label><select id="ocr-provider"><option value="deepseek">DeepSeek视觉识别（上传图片，按调用计费）</option><option value="local">本地藏文 OCR（离线）</option><option value="external">外部服务（会发送图片，需配置）</option></select><label for="local-model">本地OCR模型</label><select id="local-model"><option value="auto">默认模型（600步微调，待教师复核）</option><option value="baseline">原始预训练模型</option><option value="finetuned">600步微调量化模型</option></select><label for="ocr-psm">页面分析</label><select id="ocr-psm"><option value="6">统一文字块 · 默认</option><option value="3">自动分析 · 可用于比较</option></select><input type="file" id="image-file" accept="image/png,image/jpeg,image/webp"><button class="btn soft" id="ocr-btn">识别并打开原图校对</button><p class="tiny">选择DeepSeek会将图片发送到所配置模型服务并产生调用费用；选择本地OCR时图片不离开本机。识别后仍需校对确认。</p></article>
+    <article class="panel"><div class="panel-title"><h2>已导入教材</h2><button id="refresh-docs" class="text-link">刷新 ↻</button></div><div id="doc-list"></div><div id="document-detail"></div></article></div>
+  </section>
+  <section id="view-practice" class="view"><div class="page-heading"><div><div class="eyebrow">PRACTICE & FEEDBACK</div><h1>让练习带来反馈</h1><p>按原文与选项评分，查看错因并重练历史错题。</p></div></div><article class="panel"><div id="quiz-empty" class="empty"><span class="empty-icon">✎</span><h3>还没有练习</h3><p>在工作台选择“随堂练习”，完成任务后即可在这里作答。</p></div><form id="quiz-form" hidden><h2 id="quiz-title"></h2><p class="muted">填空按 NFC 规范化后的文字匹配；选择与判断按选项评分。可留空提交查看反馈。</p><div id="questions"></div><button class="btn primary" type="submit">提交并查看反馈 →</button></form><div id="grade-result"></div></article></section>
+  <section id="view-logs" class="view"><div class="page-heading"><div><div class="eyebrow">VERIFIABLE EXECUTION</div><h1>每一步，都有迹可循</h1><p>查看规划、工具输入输出，以及引用检查范围。</p></div><button class="btn soft" id="refresh-runs">刷新记录 ↻</button></div><div class="logs-grid"><article class="panel" id="run-list"></article><article class="panel"><h2>执行轨迹</h2><div id="trace-list" class="timeline"><p class="muted">执行一个任务后，调用轨迹将显示在这里。</p></div></article></div></section>
+  <section id="view-settings" class="view"><div class="page-heading"><div><div class="eyebrow">CONNECTIONS & EVALUATION</div><h1>接入真实能力，测量真实效果</h1><p>模型、识别服务和评测边界保持清晰。</p></div></div><div class="studio-grid"><article class="panel"><h2>服务状态</h2><div id="connection-status"></div><h3>配置方式</h3><p class="muted">将项目目录中的 .env.example 复制为 .env，填写模型与 OCR 配置，再重启服务。密钥仅在后端读取。</p><pre>LLM_API_KEY=你的密钥
+LLM_BASE_URL=https://api.deepseek.com/v1
+LLM_MODEL=账号实际可用的模型ID
+OCR_ENDPOINT=http://127.0.0.1:9000/ocr</pre><h3>当前版本的能力边界</h3><p class="muted">本地模式提供原文检索、填空/选择/判断出题、评分、错题重练与可调整教案模板。自由翻译和语义精讲需大模型；图片识别支持本地藏文OCR与DeepSeek视觉识别。已完成一轮离线CPU微调，训练日志和评测结果见上方记录；微调量化模型已接入本地OCR，原模型保留用于选择和异常回退。本系统暂不支持网页内启动训练、手写作业语义批改或藏语TTS。</p><p class="tiny">引用检查只校验来源存在，不等同于事实验证。种子术语与模型译文需教师复核。数据保存于 runtime/xueyu.db。</p></article><article class="panel"><h2>OCR 字符错误率 · CER</h2><p class="muted">粘贴同一段人工标注与识别结果，计算编辑距离。按 NFC Unicode 码点统计，保留空格与标点。</p><label for="cer-ref">人工标注</label><textarea id="cer-ref" rows="5"></textarea><label for="cer-hyp">OCR 识别结果</label><textarea id="cer-hyp" rows="5"></textarea><button class="btn primary" id="cer-btn">计算 CER</button><div id="cer-result"></div></article></div></section>
+  <footer>雪域智学 · 藏汉双语教材智能助教 <span>教学原型 v2.4 / 教学内容须教师审核</span></footer>
+</main><div id="toast" role="status" hidden></div>
+</body></html>

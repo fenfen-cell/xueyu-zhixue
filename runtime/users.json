@@ -1,0 +1,14 @@
+{
+  "mobile_teacher": {
+    "salt": "d4a70e6196888a3c554826d6a0a7c5bd",
+    "digest": "3fb760e8a169ddccda8ecf176f67bf2a0acd568229fcf0ccdaa43dd2bb7de107",
+    "iterations": 600000,
+    "role": "demo"
+  },
+  "teacher_owner": {
+    "salt": "dcc8dd4e58c48649b3ac5ce7cd33198a",
+    "digest": "682c3e0a1c515edff8aae5b5b3624706a9d3e7f52c200ab1db8320ece9c4b3af",
+    "iterations": 600000,
+    "role": "teacher"
+  }
+}

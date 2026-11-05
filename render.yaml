@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: xueyu-zhixue
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/status
+    autoDeploy: false
+    envVars:
+      - key: LLM_BASE_URL
+        value: https://api.deepseek.com
+      - key: LLM_MODEL
+        value: deepseek-flash
+      - key: LLM_API_KEY
+        sync: false
+      - key: PYTHONUTF8
+        value: "1"
+      - key: PYTHONUNBUFFERED
+        value: "1"

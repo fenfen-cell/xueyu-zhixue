@@ -1,3 +1,5 @@
+.env
+.env.local
 local-ocr/node_modules/
 __pycache__/
 *.pyc
